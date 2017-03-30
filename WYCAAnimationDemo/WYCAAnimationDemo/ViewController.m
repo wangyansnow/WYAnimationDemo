@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    NSLog(@"WY-develop");
 }
 
 #pragma mark - ButtonClick
