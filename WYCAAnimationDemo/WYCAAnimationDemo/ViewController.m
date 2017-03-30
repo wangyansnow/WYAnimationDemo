@@ -27,6 +27,7 @@
     NSLog(@"minyan");
     NSLog(@"WY=== wangyan");
     NSLog(@"更改了代码,想要合并到develop分支了");
+    NSLog(@"wy-develop");
 }
 
 #pragma mark - ButtonClick
