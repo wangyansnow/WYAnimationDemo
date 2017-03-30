@@ -47,7 +47,7 @@
 }
 
 - (IBAction)scaleAnimateClick {
-    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.m34"];
     scaleAnimation.byValue = @1;
 
     [self.animationView.layer addAnimation:scaleAnimation forKey:@"scale"];
@@ -105,29 +105,29 @@
 }
 
 - (IBAction)transitionAnimateClick {
-CATransition *transition = [CATransition animation];
+    CATransition *transition = [CATransition animation];
 
-/**
- 1.苹果定义的常量
- kCATransitionFade 交叉淡化过渡
- kCATransitionMoveIn 新视图移到旧视图上面
- kCATransitionPush 新视图把旧视图推出去
- kCATransitionReveal 将旧视图移开,显示下面的新视图
- 2.用字符串表示
- pageCurl 向上翻一页
- pageUnCurl 向下翻一页
- rippleEffect 滴水效果
- suckEffect 收缩效果，如一块布被抽走
- cube 立方体效果
- oglFlip 上下翻转效果
- */
-transition.type = @"pageCurl";
-//    transition.type = kCATransitionMoveIn;
-transition.subtype = kCATransitionFromLeft;
-transition.duration = 1.0;
+    /**
+     1.苹果定义的常量
+     kCATransitionFade 交叉淡化过渡
+     kCATransitionMoveIn 新视图移到旧视图上面
+     kCATransitionPush 新视图把旧视图推出去
+     kCATransitionReveal 将旧视图移开,显示下面的新视图
+     2.用字符串表示
+     pageCurl 向上翻一页
+     pageUnCurl 向下翻一页
+     rippleEffect 滴水效果
+     suckEffect 收缩效果，如一块布被抽走
+     cube 立方体效果
+     oglFlip 上下翻转效果
+     */
+//    transition.type = @"pageCurl";
+        transition.type = kCATransitionFade;
+    transition.subtype = kCATransitionFromLeft;
+    transition.duration = 1.0;
 
-self.animationView.backgroundColor = [UIColor darkGrayColor];
-[self.animationView.layer addAnimation:transition forKey:@"transition"];
+    self.animationView.backgroundColor = [UIColor darkGrayColor];
+    [self.animationView.layer addAnimation:transition forKey:@"transition"];
 }
 
 - (IBAction)restoreBtnClick {
