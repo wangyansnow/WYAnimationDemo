@@ -24,6 +24,7 @@
     
 
     NSLog(@"WY-develop");
+    NSLog(@"minyan");
 }
 
 #pragma mark - ButtonClick
