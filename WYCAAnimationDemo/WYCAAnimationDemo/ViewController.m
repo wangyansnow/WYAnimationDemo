@@ -24,6 +24,7 @@
     
 
     NSLog(@"WY-develop");
+    NSLog(@"WY=== wangyan");
 }
 
 #pragma mark - ButtonClick
